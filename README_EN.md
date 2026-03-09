@@ -1,5 +1,7 @@
 # TelegramPC Guardian
 
+🌐 **[Demo / Documentation](https://darkfimoz.github.io/TelegramPC-Guardian/)**
+
 ## ⚠️ DISCLAIMER
 
 **WARNING:** This project is intended solely for educational purposes and legal use on your own devices.
