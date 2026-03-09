@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelegramPC Guardian - Remote PC Control via Telegram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-switcher">
+        <button id="lang-ru" class="lang-btn active">RU</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>🛡️ TelegramPC Guardian</h1>
+            <p class="subtitle" data-ru="Удаленное управление ПК через Telegram" data-en="Remote PC Control via Telegram">Удаленное управление ПК через Telegram</p>
+            <div class="header-buttons">
+                <a href="https://github.com/DarkFimoz/TelegramPC-Guardian" class="btn btn-primary" target="_blank">
+                    <span data-ru="GitHub Репозиторий" data-en="GitHub Repository">GitHub Репозиторий</span>
+                </a>
+                <a href="https://github.com/DarkFimoz/TelegramPC-Guardian/releases" class="btn btn-secondary" target="_blank">
+                    <span data-ru="Скачать" data-en="Download">Скачать</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="disclaimer">
+        <div class="container">
+            <div class="warning-box">
+                <h2>⚠️ <span data-ru="ДИСКЛЕЙМЕР" data-en="DISCLAIMER">ДИСКЛЕЙМЕР</span></h2>
+                <p data-ru="Этот проект предназначен исключительно для образовательных целей и легального использования на собственных устройствах." 
+                   data-en="This project is intended solely for educational purposes and legal use on your own devices.">
+                   Этот проект предназначен исключительно для образовательных целей и легального использования на собственных устройствах.
+                </p>
+                <ul>
+                    <li data-ru="Использование для несанкционированного доступа к чужим компьютерам является НЕЗАКОННЫМ" 
+                        data-en="Using this software for unauthorized access to other people's computers is ILLEGAL">
+                        Использование для несанкционированного доступа к чужим компьютерам является НЕЗАКОННЫМ
+                    </li>
+                    <li data-ru="Автор не несет ответственности за любое неправомерное использование" 
+                        data-en="The author is not responsible for any misuse of this tool">
+                        Автор не несет ответственности за любое неправомерное использование
+                    </li>
+                    <li data-ru="Используйте только на устройствах, которыми вы владеете" 
+                        data-en="Use only on devices you own or have explicit permission to manage">
+                        Используйте только на устройствах, которыми вы владеете
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 data-ru="✨ Возможности" data-en="✨ Features">✨ Возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 data-ru="Информация о системе" data-en="System Information">Информация о системе</h3>
+                    <p data-ru="Получение данных о ПК, IP-адресах и ОС" data-en="Get PC data, IP addresses, and OS info">Получение данных о ПК, IP-адресах и ОС</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3 data-ru="Скриншоты" data-en="Screenshots">Скриншоты</h3>
+                    <p data-ru="Создание снимков экрана удаленно" data-en="Take screen captures remotely">Создание снимков экрана удаленно</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📷</div>
+                    <h3 data-ru="Веб-камера" data-en="Webcam">Веб-камера</h3>
+                    <p data-ru="Фото с веб-камеры компьютера" data-en="Take photos from PC webcam">Фото с веб-камеры компьютера</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3 data-ru="Запись аудио" data-en="Audio Recording">Запись аудио</h3>
+                    <p data-ru="Запись звука с микрофона" data-en="Record audio from microphone">Запись звука с микрофона</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3 data-ru="Кейлоггер" data-en="Keylogger">Кейлоггер</h3>
+                    <p data-ru="Логирование нажатий клавиш" data-en="Keystroke logging">Логирование нажатий клавиш</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3 data-ru="Буфер обмена" data-en="Clipboard">Буфер обмена</h3>
+                    <p data-ru="Получение содержимого буфера" data-en="Get clipboard content">Получение содержимого буфера</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3 data-ru="Воспроизведение медиа" data-en="Media Playback">Воспроизведение медиа</h3>
+                    <p data-ru="Аудио, видео и изображения" data-en="Audio, video, and images">Аудио, видео и изображения</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 data-ru="Мониторинг браузера" data-en="Browser Monitoring">Мониторинг браузера</h3>
+                    <p data-ru="Отслеживание открытия сайтов" data-en="Track website visits">Отслеживание открытия сайтов</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 data-ru="Автозапуск" data-en="Auto-start">Автозапуск</h3>
+                    <p data-ru="Запуск при старте системы" data-en="Launch on system boot">Запуск при старте системы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="installation">
+        <div class="container">
+            <h2 data-ru="🛠️ Установка" data-en="🛠️ Installation">🛠️ Установка</h2>
+            <div class="install-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-ru="Клонируйте репозиторий" data-en="Clone the repository">Клонируйте репозиторий</h3>
+                        <code>git clone https://github.com/DarkFimoz/TelegramPC-Guardian.git</code>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-ru="Установите зависимости" data-en="Install dependencies">Установите зависимости</h3>
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-ru="Настройте бота" data-en="Configure the bot">Настройте бота</h3>
+                        <p data-ru="Замените BOT_TOKEN и CHAT_ID в remote_control.py" 
+                           data-en="Replace BOT_TOKEN and CHAT_ID in remote_control.py">
+                           Замените BOT_TOKEN и CHAT_ID в remote_control.py
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-ru="Запустите программу" data-en="Run the program">Запустите программу</h3>
+                        <code>python remote_control.py</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commands">
+        <div class="container">
+            <h2 data-ru="📱 Команды бота" data-en="📱 Bot Commands">📱 Команды бота</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <code>/start</code>
+                    <p data-ru="Список всех команд" data-en="List all commands">Список всех команд</p>
+                </div>
+                <div class="command-card">
+                    <code>/info</code>
+                    <p data-ru="Информация о системе" data-en="System information">Информация о системе</p>
+                </div>
+                <div class="command-card">
+                    <code>/screenshot</code>
+                    <p data-ru="Сделать скриншот" data-en="Take a screenshot">Сделать скриншот</p>
+                </div>
+                <div class="command-card">
+                    <code>/photo</code>
+                    <p data-ru="Фото с камеры" data-en="Photo from camera">Фото с камеры</p>
+                </div>
+                <div class="command-card">
+                    <code>/record</code>
+                    <p data-ru="Записать аудио" data-en="Record audio">Записать аудио</p>
+                </div>
+                <div class="command-card">
+                    <code>/keylog_start</code>
+                    <p data-ru="Запустить кейлоггер" data-en="Start keylogger">Запустить кейлоггер</p>
+                </div>
+                <div class="command-card">
+                    <code>/keylog_stop</code>
+                    <p data-ru="Остановить кейлоггер" data-en="Stop keylogger">Остановить кейлоггер</p>
+                </div>
+                <div class="command-card">
+                    <code>/get_clipboard</code>
+                    <p data-ru="Буфер обмена" data-en="Get clipboard">Буфер обмена</p>
+                </div>
+                <div class="command-card">
+                    <code>/stop_music</code>
+                    <p data-ru="Остановить музыку" data-en="Stop music">Остановить музыку</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="license">
+        <div class="container">
+            <h2 data-ru="📄 Лицензия" data-en="📄 License">📄 Лицензия</h2>
+            <div class="license-box">
+                <p data-ru="Проект распространяется под лицензией MIT с дополнительными условиями:" 
+                   data-en="This project is distributed under the MIT License with additional conditions:">
+                   Проект распространяется под лицензией MIT с дополнительными условиями:
+                </p>
+                <h3 data-ru="При создании форков или модификаций вы обязаны:" 
+                    data-en="When creating forks or modifications, you must:">
+                    При создании форков или модификаций вы обязаны:
+                </h3>
+                <ol>
+                    <li>
+                        <span data-ru="Указать оригинального автора:" data-en="Credit the original author:">Указать оригинального автора:</span> <strong>DarkFimoz</strong>
+                    </li>
+                    <li data-ru="Добавить ссылку на оригинальный репозиторий" 
+                        data-en="Add a link to the original repository">
+                        Добавить ссылку на оригинальный репозиторий: 
+                        <a href="https://github.com/DarkFimoz/TelegramPC-Guardian" target="_blank">
+                            https://github.com/DarkFimoz/TelegramPC-Guardian
+                        </a>
+                    </li>
+                    <li data-ru="Сохранить это уведомление в README" 
+                        data-en="Keep this notice in the README">
+                        Сохранить это уведомление в README
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><span data-ru="Автор:" data-en="Author:">Автор:</span> <strong>DarkFimoz</strong></p>
+            <p data-ru="Используйте этот инструмент ответственно и только в законных целях!" 
+               data-en="Use this tool responsibly and only for legal purposes!">
+               Используйте этот инструмент ответственно и только в законных целях!
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/DarkFimoz/TelegramPC-Guardian" target="_blank">GitHub</a>
+                <a href="https://github.com/DarkFimoz/TelegramPC-Guardian/issues" target="_blank" data-ru="Сообщить о проблеме" data-en="Report Issue">Сообщить о проблеме</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
