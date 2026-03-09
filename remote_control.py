@@ -31,9 +31,9 @@ def get_base_path():
 def get_temp_dir():
     return os.getenv('TEMP') or os.getenv('TMP') or os.path.expanduser('~')
 
-BOT_TOKEN = "8557189681:AAGpYzv3QJuO7RjJRkuIbhFuXIpEXJmcmK8"
-CHAT_ID = "185828572"
-MONITORED_URLS = ["elschool.ru"]
+BOT_TOKEN = ""
+CHAT_ID = ""
+MONITORED_URLS = [""]
 
 def add_to_startup():
     try:
